@@ -10,9 +10,8 @@ My implemenetation of a modular Unet from the paper "U-Net: Convolutional Networ
 * Agorians
 
 
-
 # Install
-`pip install unet`
+`pip install unet-torch`
 
 # Usage
 ```python
