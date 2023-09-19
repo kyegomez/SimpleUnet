@@ -8,4 +8,5 @@ inputs = torch.randn(1, 3, 256, 256)
 outputs = model(inputs)
 
 print(outputs.size)
+
 print(outputs)
