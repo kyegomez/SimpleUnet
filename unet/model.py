@@ -2,6 +2,7 @@ import torch
 from torch import nn
 import torch.nn.functional as F
 
+#utils
 class DoubleConv(nn.Module):
     def __init__(self, in_channels, out_channels):
         super().__init__()
@@ -24,6 +25,8 @@ class DoubleConv(nn.Module):
     def forward(self, x):
         return self.double_conv(x)
 
+
+
 class Down(nn.Module):
     def __init__(self, in_channels, out_channels):
         super().__init__()
@@ -34,7 +37,9 @@ class Down(nn.Module):
     
     def forward(self, x):
         return self.maxpool_conv(x)
-    
+
+
+
 class Up(nn.Module):
     def __init__(
         self,
@@ -85,7 +90,9 @@ class OutConv(nn.Module):
     
     def forward(self, x):
         return self.conv(x)
-    
+
+
+#model  
 class Unet(nn.Module):
     def __init__(
         self,
